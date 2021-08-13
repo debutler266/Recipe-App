@@ -254,9 +254,70 @@ ul {
   margin-top: -1rem;
 }
 
-/*
-=============== 
-Navbar
-===============
-*/
+/*Navbar*/
 
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*used to see effect*/
+/*  background: green;*/
+}
+
+.nav-center {
+  /*navbar never will be bigger than 1120px*/
+  width: 90vw;
+  max-width: var(--max-width);
+  /*used to see effect*/
+  /*background: pink; */
+}
+
+.nav-header {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Make logo & nav on the same line (centered)*/
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-header img {
+  width: 200px;
+}
+
+.nav-btn {
+  padding: 0.15rem 0.75rem;
+}
+
+.nav-btn i {
+  font-size: 1.26rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.nav-link {
+  display: block;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--grey-900);
+  letter-spacing: var(--letterSpacing);
+  padding: 1rem 0;
+  border-top: 1px solid var(--grey-500);
+  transition: var(--transtion);
+}
+
+.nav-link:hover {
+  color: var(--primary-500);
+}
+
+.nav-link a {
+  padding: 0.15rem 1rem;
+}
