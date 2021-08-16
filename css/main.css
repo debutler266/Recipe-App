@@ -372,3 +372,37 @@ ul {
     margin-left: auto;
   }
 }
+
+
+/*Page styling */
+.page {
+  /*background: blue;*/
+  /*height 90% of the screen size*/
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-top: 2rem;
+  /*subtract navbar height & footer to get the min-height for all pages*/
+  min-height: calc(100vh - (6rem + 4rem));
+}
+
+
+/*Footer styling */
+.page-footer {
+  height: 4rem;
+  text-align: center;
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-footer p {
+  margin-bottom: 0;
+}
+
+.footer-logo,
+.page-footer a {
+  color: var(--primary-500);
+}
