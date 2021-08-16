@@ -300,7 +300,13 @@ ul {
 .nav-links {
   display: flex;
   flex-direction: column;
+  height: 0;
+  overflow: hidden;
+  transition: var(--transtion);
+}
 
+.show-links {
+  height: 310px;
 }
 
 .nav-link {
@@ -320,4 +326,49 @@ ul {
 
 .nav-link a {
   padding: 0.15rem 1rem;
+}
+
+
+
+/* Large screen CSS */
+
+@media screen and (min-width:992px) {
+  .nav-btn {
+    display: none;
+  }
+  .navbar {
+    height: 6rem;
+    /*to see look*
+    /*background: green*/
+
+  }
+
+  .nav-center {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-header {
+    height: auto;
+    margin-right: 2rem;
+  }
+
+  /*because height is orginally set to 0, we must fix this so they can show on accordingly on big/small screens*/
+  .nav-links {
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 0;
+    border-top: none;
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+
+  .contact-link {
+    margin-left: auto;
+  }
 }
