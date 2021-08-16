@@ -439,10 +439,125 @@ ul {
 }
 
 
-/*Media query for the header */
+/*Media query for the header on large screens */
 @media screen and (min-width:768px) {
   .hero-text h1 {
     font-size: 4rem;
     margin-bottom: 0;
   }
+}
+
+
+
+
+/* Page structure layout */
+.recipes-container {
+  display: grid;
+  /*gives 1 column layout*/
+  gap: 2rem 1rem;
+  /*for display purposes**/
+  border: 2px solid blue;
+}
+
+.tags-container {
+  border: 2px solid green;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.recipes-list {
+  display: grid;
+  /*gives 1 column layout*/
+  gap: 2rem 1rem;
+  padding-bottom: 3rem;
+  /*for display purposes**/
+  border: 2px solid red;
+}
+
+.tags-container h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.tags-list {
+  display: grid;
+  /*Set up 3 column layout*/
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tags-list a {
+  text-transform: capitalize;
+  display: block;
+  color: var(--grey-600);
+  transition: var(--transition);
+}
+
+.tags-list a:hover {
+  color: var(--primary-500);
+}
+
+/* styling single recipe card, single-recipe (class = 'recipe')*/
+
+.recipe {
+  display: block;
+}
+
+.recipe-img {
+  height: 15rem;
+  border-radius: var(--borderRadius);
+  margin-bottom: 1rem;
+}
+
+.recipe h5 {
+  margin-bottom: 0;
+  line-height: 1;
+  color: var(--grey-700);
+}
+
+.recipe p {
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+  color: var(--grey-500);
+  letter-spacing: var(--letterSpacing);
+}
+
+/*Media query for recipes on larger screens */
+
+@media screen and (min-width: 576px) {
+  .recipes-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .recipe-img {
+    height: 10rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  .recipe p {
+    font-size: 0.85rem;
+  }
+  .recipes-container {
+    /*remaing space taken up by 1fr*/
+    grid-template-columns: 200px 1fr;
+  }
+  .tags-container {
+    order: 0
+  }
+
+  .tags-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+.recipes-list {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.recipe h5 {
+  font-size: 1.15rem;
+}
 }
