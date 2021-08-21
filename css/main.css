@@ -619,8 +619,6 @@ ul {
 
 
 
-
-
 /*Contact Page styling */
 .contact-form {
   width: 100%;
@@ -642,5 +640,54 @@ ul {
   .contact-container {
     grid-template-columns: 1fr 450px;
     align-items: center;
+  }
+}
+
+
+
+
+
+/*Tags Page styling */
+
+.tags-wrapper {
+  display: grid;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.tag {
+  background: var(--grey-500);
+  border-radius: var(--borderRadius);
+  color: var(--white);
+  text-align: center;
+  transition: var(--transtion);
+  padding: 0.75rem 0;
+}
+
+.tag:hover {
+  background: var(--primary-400);
+}
+
+.tag h5,
+.tag p {
+  /*remove margins*/
+  margin-bottom: 0;
+}
+
+.tag h5 {
+  font-weight: 600;
+}
+
+
+@media screen and (min-width: 576px) {
+  .tags-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tags-wrapper {
+    /*repeat same as 1fr, 1fr 1fr*/
+    grid-template-columns: repeat(3, 1fr);
   }
 }
