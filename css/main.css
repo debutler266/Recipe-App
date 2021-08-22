@@ -637,6 +637,7 @@ ul {
 
 @media screen and (min-width: 992px) {
   /*sets up contact form & heading evenly, even though heading is technically centered*/
+  /*basically the smaller element on the page will be on the left, & centered*/
   .contact-container {
     grid-template-columns: 1fr 450px;
     align-items: center;
@@ -690,4 +691,125 @@ ul {
     /*repeat same as 1fr, 1fr 1fr*/
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+
+
+
+/*Single Recipe Page styling */
+.recipe-hero {
+  display: grid;
+  gap: 3rem;
+}
+
+.recipe-hero-img {
+  height: 300px;
+  border-radius: var(--borderRadius);
+}
+
+.recipe-hero p {
+  color: var(--grey-700);
+}
+
+.recipe-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  /*top & bottom 2, left/right 0*/
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.recipe-icons i {
+  font-size: 1.5rem;
+  color: var(--primary-400);
+}
+
+.recipe-icons h5,
+.recipe-icons p {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+}
+
+.recipe-icons p {
+  color: var(--grey-500);
+}
+
+.recipe-tags {
+  display: flex;
+  align-items: center;
+  /*if screen size is not big enough wrap*/
+  flex-wrap: wrap;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.recipe-tags a {
+  background: var(--primary-400);
+  border-radius: var(--borderRadius);
+  color: var(--white);
+  padding: 0.05rem 0.5rem;
+  margin: 0 0.25rem;
+  text-transform: capitalize;
+}
+
+
+@media screen and (min-width: 992px) {
+  .recipe-hero {
+    grid-template-columns: 4fr 5fr;
+    align-items: center;
+  }
+  .recipe-content {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+
+/*Single Recipe Page styling (part 2: recipe content) */
+.recipe-content {
+  padding: 3rem 0;
+  display: grid;
+  gap: 2rem 5rem;
+}
+
+.single-instruction header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/*only targetting child element of p for single-instruction*/
+.single-instruction > p {
+color: var(--grey-700);
+}
+/*styling hr (horizonal line)*/
+.single-instruction header div {
+  height: 2px;
+  background: var(--grey-400);
+}
+
+.single-instruction header p {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: var(--primary-400);
+}
+
+.second-column {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.single-ingredient {
+  border-bottom: 2px solid var(--grey-400);
+  padding-bottom: 0.75rem;
+  color: var(--grey-600);
+}
+
+.single-tool {
+  border-bottom: 2px solid var(--grey-400);
+  padding-bottom: 0.75rem;
+  color: var(--primary-400);
+  text-transform: capitalize;
 }
